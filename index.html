@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>小六壬测算</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @font-face {
+            font-family: 'LiuRenWeiBei';
+            src: url('data:font/woff2;base64,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') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             min-height: 100vh;
             color: #e8e8e8;
@@ -22,16 +28,20 @@
             letter-spacing: 14px;
             margin-bottom: 8px;
             padding-left: 14px;
+            font-family: "LiuRenWeiBei", "STXinwei", "STWeiBei", "FZWeiBei-S03S", "FZShuTi", "STKaiti", "KaiTi", "楷体", "Songti SC", serif;
             background: linear-gradient(180deg, #ffe9a8 0%, #f5d78e 20%, #d4a84b 55%, #a67c00 85%, #8b6914 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4)) drop-shadow(0 0 18px rgba(240,198,116,0.35));
+            font-stretch: expanded;
+            -webkit-text-stroke: 0.5px rgba(180,130,30,0.3);
         }
         .header p { font-size: 13px; color: #8899aa; letter-spacing: 2px; }
         .card {
             background: rgba(255,255,255,0.06);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 16px;
             padding: 20px;
             margin-bottom: 16px;
@@ -45,80 +55,62 @@
             align-items: center;
             gap: 8px;
         }
-        .section-title::before {
-            content: '';
-            width: 3px;
-            height: 16px;
-            background: #f0c674;
-            border-radius: 2px;
-        }
-        .calculate-btn {
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, #f0c674 0%, #d4a84b 100%);
-            color: #1a1a2e;
-            border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 4px;
-            cursor: pointer;
-            margin-bottom: 16px;
-        }
-        .footer { text-align: center; margin-top: 20px; font-size: 11px; color: #556677; }
-        .result-god { font-size: 48px; letter-spacing: 12px; margin: 16px 0; text-align: center; }
-        .da-an { color: #67c23a; }
-        .liu-lian { color: #909399; }
-        .su-xi { color: #e6a23c; }
-        .chi-kou { color: #f56c6c; }
-        .xiao-ji { color: #409eff; }
-        .kong-wang { color: #c0c4cc; }
-        .result-divider { width: 60px; height: 1px; background: rgba(240,198,116,0.3); margin: 0 auto 20px; }
-        .result-explain, .result-advice { border-radius: 10px; padding: 16px; margin-bottom: 12px; }
-        .result-explain { background: rgba(0,0,0,0.2); }
-        .result-explain h4 { font-size: 13px; color: #f0c674; margin-bottom: 8px; }
-        .result-explain p { font-size: 14px; line-height: 1.7; color: #d0d0d0; }
-        .result-advice { background: rgba(64,158,255,0.1); border: 1px solid rgba(64,158,255,0.2); }
-        .result-advice h4 { font-size: 13px; color: #409eff; margin-bottom: 8px; }
-        .result-advice p { font-size: 14px; line-height: 1.7; color: #d0d0d0; }
-        .result-detail { font-size: 12px; color: #667788; margin-top: 16px; line-height: 1.8; text-align: center; }
-        .hidden { display: none; }
+        .section-title::before { content: ''; width: 3px; height: 16px; background: #f0c674; border-radius: 2px; }
         .tab-group { display: flex; background: rgba(0,0,0,0.2); border-radius: 10px; padding: 4px; margin-bottom: 16px; }
-        .tab-btn { flex: 1; padding: 10px; border: none; background: transparent; color: #8899aa; font-size: 14px; border-radius: 8px; cursor: pointer; }
+        .tab-btn { flex: 1; padding: 10px; border: none; background: transparent; color: #8899aa; font-size: 14px; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
         .tab-btn.active { background: rgba(240,198,116,0.2); color: #f0c674; font-weight: 500; }
         .form-row { display: flex; gap: 12px; margin-bottom: 12px; }
         .form-group { flex: 1; }
         .form-group label { display: block; font-size: 13px; color: #aabbcc; margin-bottom: 6px; }
         .form-group input, .form-group select {
-            width: 100%;
-            padding: 12px 14px;
-            background: rgba(0,0,0,0.25);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 10px;
-            color: #e8e8e8;
-            font-size: 15px;
+            width: 100%; padding: 12px 14px; background: rgba(0,0,0,0.25);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 10px;
+            color: #e8e8e8; font-size: 15px; -webkit-appearance: none; appearance: none;
+            transition: border-color 0.3s;
         }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #f0c674; }
         .form-group select {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238899aa' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 14px center;
-            padding-right: 36px;
-            appearance: none;
+            background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
+        }
+        .calculate-btn {
+            width: 100%; padding: 16px;
+            background: linear-gradient(135deg, #f0c674 0%, #d4a84b 100%);
+            color: #1a1a2e; border: none; border-radius: 12px;
+            font-size: 16px; font-weight: 600; letter-spacing: 4px;
+            cursor: pointer; transition: all 0.3s;
+            margin-top: 8px; margin-bottom: 16px;
+        }
+        .calculate-btn:active { transform: scale(0.98); opacity: 0.9; }
+        #resultSection .card { margin-top: 0; }
+        .result-card { text-align: center; padding: 30px 20px; }
+        .result-title { font-size: 14px; color: #8899aa; margin-bottom: 16px; letter-spacing: 2px; }
+        .result-god { font-size: 48px; font-weight: 300; letter-spacing: 12px; margin-bottom: 8px; padding-left: 12px; }
+        .result-god.da-an { color: #67c23a; }
+        .result-god.liu-lian { color: #909399; }
+        .result-god.su-xi { color: #e6a23c; }
+        .result-god.chi-kou { color: #f56c6c; }
+        .result-god.xiao-ji { color: #409eff; }
+        .result-god.kong-wang { color: #c0c4cc; }
+        .result-pinyin { font-size: 14px; color: #8899aa; letter-spacing: 4px; margin-bottom: 24px; }
+        .result-divider { width: 60px; height: 1px; background: rgba(240,198,116,0.3); margin: 0 auto 24px; }
+        .result-explain { background: rgba(0,0,0,0.2); border-radius: 10px; padding: 16px; margin-bottom: 12px; text-align: left; }
+        .result-explain h4 { font-size: 13px; color: #f0c674; margin-bottom: 8px; }
+        .result-explain p { font-size: 14px; line-height: 1.7; color: #d0d0d0; }
+        .result-advice { background: rgba(64,158,255,0.1); border: 1px solid rgba(64,158,255,0.2); border-radius: 10px; padding: 16px; text-align: left; }
+        .result-advice h4 { font-size: 13px; color: #409eff; margin-bottom: 8px; }
+        .result-advice p { font-size: 14px; line-height: 1.7; color: #d0d0d0; }
+        .result-detail { font-size: 12px; color: #667788; margin-top: 16px; line-height: 1.8; }
+        .hidden { display: none; }
+        .footer { text-align: center; margin-top: 20px; font-size: 11px; color: #556677; }
+        .time-now { text-align: center; margin-bottom: 12px; font-size: 12px; color: #667788; }
+        .quick-btn {
+            display: inline-block; padding: 6px 12px;
+            background: rgba(240,198,116,0.15); color: #f0c674;
+            border: 1px solid rgba(240,198,116,0.3); border-radius: 20px;
+            font-size: 12px; cursor: pointer; margin: 4px;
         }
         .quick-btns { text-align: center; margin-bottom: 12px; }
-        .quick-btn {
-            display: inline-block;
-            padding: 6px 12px;
-            background: rgba(240,198,116,0.15);
-            color: #f0c674;
-            border: 1px solid rgba(240,198,116,0.3);
-            border-radius: 20px;
-            font-size: 12px;
-            cursor: pointer;
-        }
-        .time-now { text-align: center; margin-bottom: 12px; font-size: 12px; color: #667788; }
-        .result-title { text-align: center; font-size: 14px; color: #8899aa; letter-spacing: 2px; }
-        .result-pinyin { text-align: center; font-size: 14px; color: #8899aa; letter-spacing: 4px; margin-bottom: 20px; }
     </style>
 </head>
 <body>
@@ -136,65 +128,17 @@
             </div>
             <div id="solarForm">
                 <div class="form-row">
-                    <div class="form-group">
-                        <label>月</label>
-                        <input type="number" id="solarMonth" min="1" max="12" placeholder="1-12">
-                    </div>
-                    <div class="form-group">
-                        <label>日</label>
-                        <input type="number" id="solarDay" min="1" max="31" placeholder="1-31">
-                    </div>
-                    <div class="form-group">
-                        <label>时</label>
-                        <select id="solarHour">
-                            <option value="">选择时辰</option>
-                            <option value="23">子时 (23-1)</option>
-                            <option value="1">丑时 (1-3)</option>
-                            <option value="3">寅时 (3-5)</option>
-                            <option value="5">卯时 (5-7)</option>
-                            <option value="7">辰时 (7-9)</option>
-                            <option value="9">巳时 (9-11)</option>
-                            <option value="11">午时 (11-13)</option>
-                            <option value="13">未时 (13-15)</option>
-                            <option value="15">申时 (15-17)</option>
-                            <option value="17">酉时 (17-19)</option>
-                            <option value="19">戌时 (19-21)</option>
-                            <option value="21">亥时 (21-23)</option>
-                        </select>
-                    </div>
+                    <div class="form-group"><label>月</label><input type="number" id="solarMonth" min="1" max="12" placeholder="1-12"></div>
+                    <div class="form-group"><label>日</label><input type="number" id="solarDay" min="1" max="31" placeholder="1-31"></div>
+                    <div class="form-group"><label>时</label><select id="solarHour"><option value="">选择时辰</option><option value="23">子时 (23-1)</option><option value="1">丑时 (1-3)</option><option value="3">寅时 (3-5)</option><option value="5">卯时 (5-7)</option><option value="7">辰时 (7-9)</option><option value="9">巳时 (9-11)</option><option value="11">午时 (11-13)</option><option value="13">未时 (13-15)</option><option value="15">申时 (15-17)</option><option value="17">酉时 (17-19)</option><option value="19">戌时 (19-21)</option><option value="21">亥时 (21-23)</option></select></div>
                 </div>
-                <div class="quick-btns">
-                    <span class="quick-btn" onclick="fillNow()">用当前时间</span>
-                </div>
+                <div class="quick-btns"><span class="quick-btn" onclick="fillNow()">用当前时间</span></div>
             </div>
             <div id="lunarForm" class="hidden">
                 <div class="form-row">
-                    <div class="form-group">
-                        <label>月</label>
-                        <input type="number" id="lunarMonth" min="1" max="12" placeholder="1-12">
-                    </div>
-                    <div class="form-group">
-                        <label>日</label>
-                        <input type="number" id="lunarDay" min="1" max="30" placeholder="1-30">
-                    </div>
-                    <div class="form-group">
-                        <label>时</label>
-                        <select id="lunarHour">
-                            <option value="">选择时辰</option>
-                            <option value="0">子时</option>
-                            <option value="1">丑时</option>
-                            <option value="2">寅时</option>
-                            <option value="3">卯时</option>
-                            <option value="4">辰时</option>
-                            <option value="5">巳时</option>
-                            <option value="6">午时</option>
-                            <option value="7">未时</option>
-                            <option value="8">申时</option>
-                            <option value="9">酉时</option>
-                            <option value="10">戌时</option>
-                            <option value="11">亥时</option>
-                        </select>
-                    </div>
+                    <div class="form-group"><label>月</label><input type="number" id="lunarMonth" min="1" max="12" placeholder="1-12"></div>
+                    <div class="form-group"><label>日</label><input type="number" id="lunarDay" min="1" max="30" placeholder="1-30"></div>
+                    <div class="form-group"><label>时</label><select id="lunarHour"><option value="">选择时辰</option><option value="0">子时</option><option value="1">丑时</option><option value="2">寅时</option><option value="3">卯时</option><option value="4">辰时</option><option value="5">巳时</option><option value="6">午时</option><option value="7">未时</option><option value="8">申时</option><option value="9">酉时</option><option value="10">戌时</option><option value="11">亥时</option></select></div>
                 </div>
             </div>
         </div>
@@ -228,27 +172,27 @@
         </div>
         <button class="calculate-btn" onclick="calculate()">开 始 测 算</button>
         <div id="resultSection" class="hidden">
-            <div class="card" id="resultCard"></div>
+            <div class="card result-card" id="resultCard"></div>
         </div>
         <div class="footer">仅供娱乐参考 · 命运掌握在自己手中</div>
     </div>
     <script>
         const lunarInfo=[0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2,0x04ae0,0x0a5b6,0x0a4d0,0x0d250,0x1d255,0x0b540,0x0d6a0,0x0ada2,0x095b0,0x14977,0x04970,0x0a4b0,0x0b4b5,0x06a50,0x06d40,0x1ab54,0x02b60,0x09570,0x052f2,0x04970,0x06566,0x0d4a0,0x0ea50,0x06e95,0x05ad0,0x02b60,0x186e3,0x092e0,0x1c8d7,0x0c950,0x0d4a0,0x1d8a6,0x0b550,0x056a0,0x1a5b4,0x025d0,0x092d0,0x0d2b2,0x0a950,0x0b557,0x06ca0,0x0b550,0x15355,0x04da0,0x0a5b0,0x14573,0x052b0,0x0a9a8,0x0e950,0x06aa0,0x0aea6,0x0ab50,0x04b60,0x0aae4,0x0a570,0x05260,0x0f263,0x0d950,0x05b57,0x056a0,0x096d0,0x04dd5,0x04ad0,0x0a4d0,0x0d4d4,0x0d250,0x0d558,0x0b540,0x0b6a0,0x195a6,0x095b0,0x049b0,0x0a974,0x0a4b0,0x0b27a,0x06a50,0x06d40,0x0af46,0x0ab60,0x09570,0x04af5,0x04970,0x064b0,0x074a3,0x0ea50,0x06b58,0x055c0,0x0ab60,0x096d5,0x092e0,0x0c960,0x0d954,0x0d4a0,0x0da50,0x07552,0x056a0,0x0abb7,0x025d0,0x092d0,0x0cab5,0x0a950,0x0b4a0,0x0baa4,0x0ad50,0x055d9,0x04ba0,0x0a5b0,0x15176,0x052b0,0x0a930,0x07954,0x06aa0,0x0ad50,0x05b52,0x04b60,0x0a6e6,0x0a4e0,0x0d260,0x0ea65,0x0d530,0x05aa0,0x076a3,0x096d0,0x04afb,0x04ad0,0x0a4d0,0x1d0b6,0x0d250,0x0d520,0x0dd45,0x0b5a0,0x056d0,0x055b2,0x049b0,0x0a577,0x0a4b0,0x0aa50,0x1b255,0x06d20,0x0ada0,0x14b63,0x09370,0x049f8,0x04970,0x064b0,0x168a6,0x0ea50,0x06b20,0x1a6c4,0x0aae0,0x0a2e0,0x0d2e3,0x0c960,0x0d557,0x0d4a0,0x0da50,0x05d55,0x056a0,0x0a6d0,0x055d4,0x052d0,0x0a9b8,0x0a950,0x0b4a0,0x0b6a6,0x0ad50,0x055a0,0x0aba4,0x0a5b0,0x052b0,0x0b273,0x06930,0x07337,0x06aa0,0x0ad50,0x14b55,0x04b60,0x0a570,0x054e4,0x0d160,0x0e968,0x0d520,0x0daa0,0x16aa6,0x056d0,0x04ae0,0x0a9d4,0x0a2d0,0x0d150,0x0f252,0x0d520];
-        function lYearDays(y){let sum=348;for(let i=0x8000;i>0x8;i>>=1){sum+=(lunarInfo[y-1900]&i)?1:0;}return sum+leapDays(y);}
         function leapMonth(y){return lunarInfo[y-1900]&0xf;}
-        function leapDays(y){if(leapMonth(y)){return(lunarInfo[y-1900]&0x10000)?30:29;}return 0;}
+        function leapDays(y){if(leapMonth(y))return(lunarInfo[y-1900]&0x10000)?30:29;return 0;}
+        function lYearDays(y){let s=348;for(let i=0x8000;i>0x8;i>>=1)s+=(lunarInfo[y-1900]&i)?1:0;return s+leapDays(y);}
         function monthDays(y,m){return(lunarInfo[y-1900]&(0x10000>>m))?30:29;}
-        function solarToLunar(year,month,day){if(year<1900||year>2100)return null;const baseDate=new Date(1900,0,31);const objDate=new Date(year,month-1,day);let offset=Math.floor((objDate-baseDate)/86400000);let lunarYear=1900;let temp=0;for(;lunarYear<2101&&offset>0;lunarYear++){temp=lYearDays(lunarYear);offset-=temp;}if(offset<0){offset+=temp;lunarYear--;}let leap=leapMonth(lunarYear);let isLeap=false;let lunarMonth=1;for(;lunarMonth<13&&offset>0;lunarMonth++){if(leap>0&&lunarMonth===leap+1&&!isLeap){lunarMonth--;isLeap=true;temp=leapDays(lunarYear);}else{temp=monthDays(lunarYear,lunarMonth);}if(isLeap&&lunarMonth===leap+1)isLeap=false;offset-=temp;}if(offset===0&&leap>0&&lunarMonth===leap+1){if(isLeap){isLeap=false;}else{isLeap=true;lunarMonth--;}}if(offset<0){offset+=temp;lunarMonth--;}const lunarDay=offset+1;return{year:lunarYear,month:lunarMonth,day:lunarDay,isLeap:isLeap};}
-        const gods=[{name:'大安',pinyin:'DÀ ĀN',cls:'da-an',type:'吉'},{name:'流连',pinyin:'LIÚ LIÁN',cls:'liu-lian',type:'凶'},{name:'速喜',pinyin:'SÙ XǏ',cls:'su-xi',type:'吉'},{name:'赤口',pinyin:'CHÌ KǑU',cls:'chi-kou',type:'凶'},{name:'小吉',pinyin:'XIǍO JÍ',cls:'xiao-ji',type:'吉'},{name:'空亡',pinyin:'KŌNG WÁNG',cls:'kong-wang',type:'凶'}];
-        const explanations={general:{'大安':'诸事安稳，吉祥如意，诸事可成。','流连':'诸事拖延，进展缓慢，需有耐心。','速喜':'喜事将至，好运来临，把握时机。','赤口':'口舌是非，纷争不断，谨言慎行。','小吉':'小有吉利，事有可为，稳扎稳打。','空亡':'事多虚空，难有结果，不宜妄动。'},work:{'大安':'工作安稳，职位稳固，稳步发展。','流连':'工作拖沓，进度受阻，需防拖延。','速喜':'工作顺心，喜事临门，有望晋升。','赤口':'职场是非，同事纠纷，注意口舌。','小吉':'工作顺利，小有成就，继续努力。','空亡':'工作不顺，计划落空，宜守不宜进。'},business:{'大安':'生意平稳，财源稳定，可长期经营。','流连':'生意冷淡，成交缓慢，需耐心等待。','速喜':'生意兴隆，财源广进，把握良机。','赤口':'生意纠纷，破财消灾，谨防欺诈。','小吉':'生意小赚，有利可图，积少成多。','空亡':'生意亏损，本利难回，不宜投资。'},investment:{'大安':'投资稳健，收益稳定，可放心投入。','流连':'投资被套，资金周转不灵，需谨慎。','速喜':'投资获利，财运亨通，可大胆入场。','赤口':'投资有风险，易有亏损，忌冲动。','小吉':'投资小有收益，见好就收。','空亡':'投资无望，本金难保，不宜投入。'},love:{'大安':'感情稳定，两情相悦，可长远发展。','流连':'感情纠缠，分分合合，难以决断。','速喜':'桃花运旺，喜结良缘，好事将近。','赤口':'感情争吵，矛盾重重，需多沟通。','小吉':'感情升温，小有甜蜜，珍惜当下。','空亡':'感情虚空，有缘无分，不宜强求。'},marriage:{'大安':'婚姻美满，家庭和睦，白头偕老。','流连':'婚事拖延，进程缓慢，需耐心等待。','速喜':'婚期将近，喜结连理，大吉大利。','赤口':'婚事多磨，口角是非，需谨慎处理。','小吉':'婚事可成，小有波折，终成眷属。','空亡':'婚事难成，恐有变卦，不宜强求。'},health:{'大安':'身体康健，精神饱满，无病无灾。','流连':'身体抱恙，缠绵不愈，需好好调养。','速喜':'身体转好，病愈康复，心情舒畅。','赤口':'身体有恙，注意饮食，预防疾病。','小吉':'身体无碍，小恙无妨，注意休息。','空亡':'身体虚弱，精神不济，需静心休养。'},sick:{'大安':'病情稳定，无大碍，安心休养即可。','流连':'病情缠绵，康复缓慢，需长期调理。','速喜':'病情好转，即将痊愈，保持好心情。','赤口':'病情加重，需及时就医，不可大意。','小吉':'病情渐好，小有起色，继续治疗。','空亡':'病情难料，医治效果不佳，另寻他法。'},lost:{'大安':'失物不远，原地可寻，切莫慌张。','流连':'失物难寻，被人藏匿，需慢慢查找。','速喜':'失物可寻，很快有消息，主动寻找。','赤口':'失物因口舌丢失，难找回，防偷盗。','小吉':'失物可找回，在熟人或近处。','空亡':'失物难寻，已不在原处，放弃为好。'},travel:{'大安':'出行平安，一路顺风，可放心前往。','流连':'出行受阻，行程延误，需有耐心。','速喜':'出行顺利，途中有喜，收获颇丰。','赤口':'出行有险，注意安全，谨防意外。','小吉':'出行顺利，小有所获，旅途愉快。','空亡':'出行不利，多有不顺，建议取消。'},exam:{'大安':'考试顺利，发挥正常，成绩理想。','流连':'考试不顺，发挥失常，需多复习。','速喜':'考试大捷，超常发挥，金榜题名。','赤口':'考试有失，粗心大意，需仔细审题。','小吉':'考试小成，成绩尚可，再接再厉。','空亡':'考试失利，名落孙山，需另作打算。'},interview:{'大安':'面试安稳，发挥正常，有望成功。','流连':'面试拖延，结果迟迟不出，需等待。','速喜':'面试成功，喜讯传来，把握机会。','赤口':'面试有冲突，言语不慎，注意表达。','小吉':'面试有望，小有优势，积极争取。','空亡':'面试无望，难以成功，另寻他路。'},contract:{'大安':'合同顺利，条款公平，可放心签署。','流连':'合同拖延，谈判僵持，需耐心协商。','速喜':'合同可成，皆大欢喜，尽快落实。','赤口':'合同有纠纷，条款争议，谨防陷阱。','小吉':'合同可签，小有利好，认真审阅。','空亡':'合同难成，恐有变故，不宜签署。'},lawsuit:{'大安':'官司安稳，有理有据，可获公正。','流连':'官司拖延，久拖不决，耗费时日。','速喜':'官司胜诉，沉冤得雪，大快人心。','赤口':'官司激烈，唇枪舌战，注意言辞。','小吉':'官司小胜，达成和解，见好就收。','空亡':'官司不利，有理难辩，建议和解。'},move:{'大安':'搬家安稳，新居吉利，可放心搬迁。','流连':'搬家拖延，进度缓慢，需提前准备。','速喜':'乔迁之喜，新居兴旺，大好时机。','赤口':'搬家有纠纷，注意财物，谨防磕碰。','小吉':'搬家顺利，小有波折，总体吉祥。','空亡':'搬家不宜，新居不安，建议暂缓。'},birth:{'大安':'生育安稳，母子平安，顺产吉祥。','流连':'产期延后，需耐心等待，注意调养。','速喜':'喜得贵子，生产顺利，大喜临门。','赤口':'生产有惊，需防意外，谨遵医嘱。','小吉':'生产顺利，小有所喜，母子安康。','空亡':'生育艰难，不易受孕，需静心调养。'},weather:{'大安':'天气晴朗，万里无云，适合出行。','流连':'阴雨连绵，天气阴沉，不见阳光。','速喜':'天气转晴，雨过天晴，心情舒畅。','赤口':'天气多变，风雨雷电，注意防范。','小吉':'天气尚可，多云转晴，小有凉意。','空亡':'天气难测，变化无常，不宜远行。'},noble:{'大安':'贵人在侧，稳如泰山，可求助身边人。','流连':'贵人难寻，迟迟不遇，需耐心等待。','速喜':'贵人将至，很快相遇，主动结交。','赤口':'贵人犯冲，言语失和，注意沟通方式。','小吉':'有贵人相助，虽非大助，但也有益。','空亡':'贵人难遇，凡事靠自己，不宜依赖。'},villain:{'大安':'无小人作祟，人际安稳，可放心行事。','流连':'小人纠缠，阴魂不散，需小心提防。','速喜':'小人退散，是非远离，好运来临。','赤口':'小人当道，口舌是非多，谨言慎行。','小吉':'有小人但无伤大雅，稍加提防即可。','空亡':'小人暗中作祟，难以察觉，需谨慎。'},letter:{'大安':'音信安稳，消息准时，无需担心。','流连':'音信延迟，消息迟迟不到，需等待。','速喜':'喜讯传来，佳音将至，注意查收。','赤口':'消息有争执，信中带是非，注意分辨。','小吉':'有好消息传来，虽非大喜，但也可喜。','空亡':'音信全无，消息石沉大海，不要等了。'}};
+        function solarToLunar(y,m,d){if(y<1900||y>2100)return null;const b=new Date(1900,0,31),o=new Date(y,m-1,d);let off=Math.floor((o-b)/86400000),ly=1900,temp=0;for(;ly<2101&&off>0;ly++){temp=lYearDays(ly);off-=temp;}if(off<0){off+=temp;ly--;}let leap=leapMonth(ly),isLeap=false,lm=1;for(;lm<13&&off>0;lm++){if(leap>0&&lm===leap+1&&!isLeap){lm--;isLeap=true;temp=leapDays(ly);}else temp=monthDays(ly,lm);if(isLeap&&lm===leap+1)isLeap=false;off-=temp;}if(off===0&&leap>0&&lm===leap+1){if(isLeap)isLeap=false;else{isLeap=true;lm--;}}if(off<0){off+=temp;lm--;}return{year:ly,month:lm,day:off+1,isLeap:isLeap};}
+        const gods=[{name:'大安',pinyin:'DÀ ĀN',class:'da-an',type:'吉'},{name:'流连',pinyin:'LIÚ LIÁN',class:'liu-lian',type:'凶'},{name:'速喜',pinyin:'SÙ XǏ',class:'su-xi',type:'吉'},{name:'赤口',pinyin:'CHÌ KǑU',class:'chi-kou',type:'凶'},{name:'小吉',pinyin:'XIǍO JÍ',class:'xiao-ji',type:'吉'},{name:'空亡',pinyin:'KŌNG WÁNG',class:'kong-wang',type:'凶'}];
+        const exps={general:{'大安':'诸事安稳，吉祥如意，诸事可成。','流连':'诸事拖延，进展缓慢，需有耐心。','速喜':'喜事将至，好运来临，把握时机。','赤口':'口舌是非，纷争不断，谨言慎行。','小吉':'小有吉利，事有可为，稳扎稳打。','空亡':'事多虚空，难有结果，不宜妄动。'},work:{'大安':'工作安稳，职位稳固，稳步发展。','流连':'工作拖沓，进度受阻，需防拖延。','速喜':'工作顺心，喜事临门，有望晋升。','赤口':'职场是非，同事纠纷，注意口舌。','小吉':'工作顺利，小有成就，继续努力。','空亡':'工作不顺，计划落空，宜守不宜进。'},business:{'大安':'生意平稳，财源稳定，可长期经营。','流连':'生意冷淡，成交缓慢，需耐心等待。','速喜':'生意兴隆，财源广进，把握良机。','赤口':'生意纠纷，破财消灾，谨防欺诈。','小吉':'生意小赚，有利可图，积少成多。','空亡':'生意亏损，本利难回，不宜投资。'},investment:{'大安':'投资稳健，收益稳定，可放心投入。','流连':'投资被套，资金周转不灵，需谨慎。','速喜':'投资获利，财运亨通，可大胆入场。','赤口':'投资有风险，易有亏损，忌冲动。','小吉':'投资小有收益，见好就收。','空亡':'投资无望，本金难保，不宜投入。'},love:{'大安':'感情稳定，两情相悦，可长远发展。','流连':'感情纠缠，分分合合，难以决断。','速喜':'桃花运旺，喜结良缘，好事将近。','赤口':'感情争吵，矛盾重重，需多沟通。','小吉':'感情升温，小有甜蜜，珍惜当下。','空亡':'感情虚空，有缘无分，不宜强求。'},marriage:{'大安':'婚姻美满，家庭和睦，白头偕老。','流连':'婚事拖延，进程缓慢，需耐心等待。','速喜':'婚期将近，喜结连理，大吉大利。','赤口':'婚事多磨，口角是非，需谨慎处理。','小吉':'婚事可成，小有波折，终成眷属。','空亡':'婚事难成，恐有变卦，不宜强求。'},health:{'大安':'身体康健，精神饱满，无病无灾。','流连':'身体抱恙，缠绵不愈，需好好调养。','速喜':'身体转好，病愈康复，心情舒畅。','赤口':'身体有恙，注意饮食，预防疾病。','小吉':'身体无碍，小恙无妨，注意休息。','空亡':'身体虚弱，精神不济，需静心休养。'},sick:{'大安':'病情稳定，无大碍，安心休养即可。','流连':'病情缠绵，康复缓慢，需长期调理。','速喜':'病情好转，即将痊愈，保持好心情。','赤口':'病情加重，需及时就医，不可大意。','小吉':'病情渐好，小有起色，继续治疗。','空亡':'病情难料，医治效果不佳，另寻他法。'},lost:{'大安':'失物不远，原地可寻，切莫慌张。','流连':'失物难寻，被人藏匿，需慢慢查找。','速喜':'失物可寻，很快有消息，主动寻找。','赤口':'失物因口舌丢失，难找回，防偷盗。','小吉':'失物可找回，在熟人或近处。','空亡':'失物难寻，已不在原处，放弃为好。'},travel:{'大安':'出行平安，一路顺风，可放心前往。','流连':'出行受阻，行程延误，需有耐心。','速喜':'出行顺利，途中有喜，收获颇丰。','赤口':'出行有险，注意安全，谨防意外。','小吉':'出行顺利，小有所获，旅途愉快。','空亡':'出行不利，多有不顺，建议取消。'},exam:{'大安':'考试顺利，发挥正常，成绩理想。','流连':'考试不顺，发挥失常，需多复习。','速喜':'考试大捷，超常发挥，金榜题名。','赤口':'考试有失，粗心大意，需仔细审题。','小吉':'考试小成，成绩尚可，再接再厉。','空亡':'考试失利，名落孙山，需另作打算。'},interview:{'大安':'面试安稳，发挥正常，有望成功。','流连':'面试拖延，结果迟迟不出，需等待。','速喜':'面试成功，喜讯传来，把握机会。','赤口':'面试有冲突，言语不慎，注意表达。','小吉':'面试有望，小有优势，积极争取。','空亡':'面试无望，难以成功，另寻他路。'},contract:{'大安':'合同顺利，条款公平，可放心签署。','流连':'合同拖延，谈判僵持，需耐心协商。','速喜':'合同可成，皆大欢喜，尽快落实。','赤口':'合同有纠纷，条款争议，谨防陷阱。','小吉':'合同可签，小有利好，认真审阅。','空亡':'合同难成，恐有变故，不宜签署。'},lawsuit:{'大安':'官司安稳，有理有据，可获公正。','流连':'官司拖延，久拖不决，耗费时日。','速喜':'官司胜诉，沉冤得雪，大快人心。','赤口':'官司激烈，唇枪舌战，注意言辞。','小吉':'官司小胜，达成和解，见好就收。','空亡':'官司不利，有理难辩，建议和解。'},move:{'大安':'搬家安稳，新居吉利，可放心搬迁。','流连':'搬家拖延，进度缓慢，需提前准备。','速喜':'乔迁之喜，新居兴旺，大好时机。','赤口':'搬家有纠纷，注意财物，谨防磕碰。','小吉':'搬家顺利，小有波折，总体吉祥。','空亡':'搬家不宜，新居不安，建议暂缓。'},birth:{'大安':'生育安稳，母子平安，顺产吉祥。','流连':'产期延后，需耐心等待，注意调养。','速喜':'喜得贵子，生产顺利，大喜临门。','赤口':'生产有惊，需防意外，谨遵医嘱。','小吉':'生产顺利，小有所喜，母子安康。','空亡':'生育艰难，不易受孕，需静心调养。'},weather:{'大安':'天气晴朗，万里无云，适合出行。','流连':'阴雨连绵，天气阴沉，不见阳光。','速喜':'天气转晴，雨过天晴，心情舒畅。','赤口':'天气多变，风雨雷电，注意防范。','小吉':'天气尚可，多云转晴，小有凉意。','空亡':'天气难测，变化无常，不宜远行。'},noble:{'大安':'贵人在侧，稳如泰山，可求助身边人。','流连':'贵人难寻，迟迟不遇，需耐心等待。','速喜':'贵人将至，很快相遇，主动结交。','赤口':'贵人犯冲，言语失和，注意沟通方式。','小吉':'有贵人相助，虽非大助，但也有益。','空亡':'贵人难遇，凡事靠自己，不宜依赖。'},villain:{'大安':'无小人作祟，人际安稳，可放心行事。','流连':'小人纠缠，阴魂不散，需小心提防。','速喜':'小人退散，是非远离，好运来临。','赤口':'小人当道，口舌是非多，谨言慎行。','小吉':'有小人但无伤大雅，稍加提防即可。','空亡':'小人暗中作祟，难以察觉，需谨慎。'},letter:{'大安':'音信安稳，消息准时，无需担心。','流连':'音信延迟，消息迟迟不到，需等待。','速喜':'喜讯传来，佳音将至，注意查收。','赤口':'消息有争执，信中带是非，注意分辨。','小吉':'有好消息传来，虽非大喜，但也可喜。','空亡':'音信全无，消息石沉大海，不要等了。'}};
         const advices={'大安':'宜守正待时，稳步前行，忌冒进冲动。','流连':'宜耐心等待，以静制动，忌急功近利。','速喜':'宜把握时机，主动出击，忌犹豫不决。','赤口':'宜谨言慎行，低调行事，忌与人争执。','小吉':'宜稳扎稳打，循序渐进，忌贪多求快。','空亡':'宜修身养性，静待时机，忌妄动作为。'};
-        function hourToBranch(hour){const h=parseInt(hour);if(h>=23||h<1)return 0;return Math.floor((h+1)/2);}
-        function calculateLiuRen(month,day,hour){const monthIdx=(month-1)%6;const dayIdx=(monthIdx+day-1)%6;const hourIdx=(dayIdx+hour)%6;return{monthGod:gods[monthIdx],dayGod:gods[dayIdx],hourGod:gods[hourIdx],result:gods[hourIdx]};}
-        let currentCalendar='solar';
-        function switchCalendar(type){currentCalendar=type;document.querySelectorAll('.tab-btn').forEach(btn=>btn.classList.remove('active'));event.target.classList.add('active');if(type==='solar'){document.getElementById('solarForm').classList.remove('hidden');document.getElementById('lunarForm').classList.add('hidden');}else{document.getElementById('solarForm').classList.add('hidden');document.getElementById('lunarForm').classList.remove('hidden');}}
-        function fillNow(){const now=new Date();document.getElementById('solarMonth').value=now.getMonth()+1;document.getElementById('solarDay').value=now.getDate();const hour=now.getHours();const hourSelect=document.getElementById('solarHour');let closest=23;if(hour>=1&&hour<3)closest=1;else if(hour>=3&&hour<5)closest=3;else if(hour>=5&&hour<7)closest=5;else if(hour>=7&&hour<9)closest=7;else if(hour>=9&&hour<11)closest=9;else if(hour>=11&&hour<13)closest=11;else if(hour>=13&&hour<15)closest=13;else if(hour>=15&&hour<17)closest=15;else if(hour>=17&&hour<19)closest=17;else if(hour>=19&&hour<21)closest=19;else if(hour>=21&&hour<23)closest=21;hourSelect.value=closest;}
-        function updateTimeNow(){const now=new Date();const lunar=solarToLunar(now.getFullYear(),now.getMonth()+1,now.getDate());if(lunar){document.getElementById('timeNow').textContent='今天：'+now.getFullYear()+'年'+(now.getMonth()+1)+'月'+now.getDate()+'日 农历'+lunar.month+'月'+lunar.day+'日';}}
-        function calculate(){let month,day,hour;let lunarMonth,lunarDay;const eventType=document.getElementById('eventType').value;if(!eventType){alert('请选择事件类型');return;}if(currentCalendar==='solar'){const sMonth=parseInt(document.getElementById('solarMonth').value);const sDay=parseInt(document.getElementById('solarDay').value);const sHour=document.getElementById('solarHour').value;if(!sMonth||!sDay||!sHour){alert('请填写完整的时间信息');return;}const now=new Date();const lunar=solarToLunar(now.getFullYear(),sMonth,sDay);if(!lunar){alert('日期转换失败，请检查输入');return;}lunarMonth=lunar.month;lunarDay=lunar.day;month=lunar.month;day=lunar.day;hour=hourToBranch(sHour);}else{const lMonth=parseInt(document.getElementById('lunarMonth').value);const lDay=parseInt(document.getElementById('lunarDay').value);const lHour=document.getElementById('lunarHour').value;if(!lMonth||!lDay||lHour===''){alert('请填写完整的时间信息');return;}month=lMonth;day=lDay;hour=parseInt(lHour);lunarMonth=lMonth;lunarDay=lDay;}const result=calculateLiuRen(month,day,hour);const god=result.result;const explain=explanations[eventType]||explanations['general'];const explainText=explain[god.name]||'';const adviceText=advices[god.name]||'';const hourNames=['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];const resultHtml='<div class="result-title">占 · 得</div><div class="result-god '+god.cls+'">'+god.name+'</div><div class="result-pinyin">'+god.pinyin+' · '+god.type+'</div><div class="result-divider"></div><div class="result-explain"><h4>解 释</h4><p>'+explainText+'</p></div><div class="result-advice"><h4>建 议</h4><p>'+adviceText+'</p></div><div class="result-detail">农历 '+lunarMonth+'月'+lunarDay+'日 '+hourNames[hour]+'时<br>月上起日：'+result.monthGod.name+' → 日上起时：'+result.dayGod.name+' → 落宫：'+result.hourGod.name+'</div>';document.getElementById('resultCard').innerHTML=resultHtml;document.getElementById('resultSection').classList.remove('hidden');document.getElementById('resultSection').scrollIntoView({behavior:'smooth',block:'start'});}
+        function hourToBranch(h){h=parseInt(h);if(h>=23||h<1)return 0;return Math.floor((h+1)/2);}
+        function calcLiuRen(m,d,h){const mi=(m-1)%6,di=(mi+d-1)%6,hi=(di+h)%6;return{mg:gods[mi],dg:gods[di],hg:gods[hi],r:gods[hi]};}
+        let curCal='solar';
+        function switchCalendar(t){curCal=t;document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));event.target.classList.add('active');document.getElementById('solarForm').classList.toggle('hidden',t!=='solar');document.getElementById('lunarForm').classList.toggle('hidden',t!=='lunar');}
+        function fillNow(){const n=new Date();document.getElementById('solarMonth').value=n.getMonth()+1;document.getElementById('solarDay').value=n.getDate();const h=n.getHours(),hs=document.getElementById('solarHour');let c=23;if(h>=1&&h<3)c=1;else if(h>=3&&h<5)c=3;else if(h>=5&&h<7)c=5;else if(h>=7&&h<9)c=7;else if(h>=9&&h<11)c=9;else if(h>=11&&h<13)c=11;else if(h>=13&&h<15)c=13;else if(h>=15&&h<17)c=15;else if(h>=17&&h<19)c=17;else if(h>=19&&h<21)c=19;else if(h>=21&&h<23)c=21;hs.value=c;}
+        function updateTimeNow(){const n=new Date(),l=solarToLunar(n.getFullYear(),n.getMonth()+1,n.getDate());if(l)document.getElementById('timeNow').textContent='今天：'+n.getFullYear()+'年'+(n.getMonth()+1)+'月'+n.getDate()+'日 农历'+l.month+'月'+l.day+'日';}
+        function calculate(){let m,d,h,lm,ld;const et=document.getElementById('eventType').value;if(!et){alert('请选择事件类型');return;}if(curCal==='solar'){const sm=parseInt(document.getElementById('solarMonth').value),sd=parseInt(document.getElementById('solarDay').value),sh=document.getElementById('solarHour').value;if(!sm||!sd||!sh){alert('请填写完整的时间信息');return;}const n=new Date(),l=solarToLunar(n.getFullYear(),sm,sd);if(!l){alert('日期转换失败，请检查输入');return;}lm=l.month;ld=l.day;m=l.month;d=l.day;h=hourToBranch(sh);}else{const lm2=parseInt(document.getElementById('lunarMonth').value),ld2=parseInt(document.getElementById('lunarDay').value),lh=document.getElementById('lunarHour').value;if(!lm2||!ld2||lh===''){alert('请填写完整的时间信息');return;}m=lm2;d=ld2;h=parseInt(lh);lm=lm2;ld=ld2;}const res=calcLiuRen(m,d,h),g=res.r,exp=exps[et]||exps['general'],etxt=exp[g.name]||'',atxt=advices[g.name]||'',hn=['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];document.getElementById('resultCard').innerHTML='<div class="result-title">占 · 得</div><div class="result-god '+g.class+'">'+g.name+'</div><div class="result-pinyin">'+g.pinyin+' · '+g.type+'</div><div class="result-divider"></div><div class="result-explain"><h4>解 释</h4><p>'+etxt+'</p></div><div class="result-advice"><h4>建 议</h4><p>'+atxt+'</p></div><div class="result-detail">农历 '+lm+'月'+ld+'日 '+hn[h]+'时<br>月上起日：'+res.mg.name+' → 日上起时：'+res.dg.name+' → 落宫：'+res.hg.name+'</div>';document.getElementById('resultSection').classList.remove('hidden');document.getElementById('resultSection').scrollIntoView({behavior:'smooth',block:'start'});}
         updateTimeNow();
     </script>
 </body>
